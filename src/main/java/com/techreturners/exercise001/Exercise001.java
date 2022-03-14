@@ -4,6 +4,11 @@ import java.util.List;
 import java.util.Locale;
 
 public class Exercise001 {
+    /**
+     * Capitalise the first word of the given string.
+     * @param word to be capitalised
+     * @return capitalised first word
+     */
     public String capitalizeWord(String word) {
         // As this is a simple test,
         // we assume that the first character of the string (word)
