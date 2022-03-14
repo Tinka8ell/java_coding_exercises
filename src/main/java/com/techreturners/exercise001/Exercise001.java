@@ -16,9 +16,15 @@ public class Exercise001 {
         return word.substring(0, 1).toUpperCase() + word.substring(1);
     }
 
+    /**
+     * Generate capitalised dot delimited initials for given words.
+     * @param firstName to get initial of
+     * @param lastName to get initial of
+     * @return Capitalised initials separated by a '.'
+     */
     public String generateInitials(String firstName, String lastName) {
-        // Add your code here
-        return "";
+        // As there is no documentation, I am assuming that the given names might be lowercase.
+        return firstName.substring(0, 1).toUpperCase() + "." + lastName.substring(0, 1).toUpperCase();
     }
 
     public double addVat(double originalPrice, double vatRate) {
