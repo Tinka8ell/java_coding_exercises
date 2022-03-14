@@ -53,8 +53,18 @@ public class Exercise001 {
         return result;
     }
 
+    /**
+     * Count the number of users of type "Linux".
+     * This does not require it, but,
+     * as there is no checking of types in class User,
+     * I do a non-case match for the User.type.
+     * @param users List of user objects
+     * @return Count of those users with type of "linux"
+     */
     public int countLinuxUsers(List<User> users) {
-        // Add your code here
-        return 0;
+        // Yea, get to play with Streams!
+        return (int) users.stream().map(User::getType)
+                .filter(userType -> userType.equalsIgnoreCase("Linux"))
+                .count();
     }
 }
