@@ -27,9 +27,16 @@ public class Exercise001 {
         return firstName.substring(0, 1).toUpperCase() + "." + lastName.substring(0, 1).toUpperCase();
     }
 
+    /**
+     * Return the price including vat.
+     * @param originalPrice as provided to 2 decimal places
+     * @param vatRate as a percentage to add
+     * @return Original price + vat to 2 decimal places
+     */
     public double addVat(double originalPrice, double vatRate) {
-        // Add your code here
-        return 0.0;
+        // could have split this out, but the logic is just too trivial!
+        // to pass the tests, have to assume the currency is rounded down to 2 dp
+        return Math.floor(originalPrice * (1 + vatRate / 100.0) * 100.0) / 100.0;
     }
 
     public String reverse(String sentence) {
