@@ -1,7 +1,7 @@
 package com.techreturners.exercise001;
 
 import java.util.List;
-import java.util.Locale;
+import java.util.stream.Stream;
 
 public class Exercise001 {
     /**
@@ -39,9 +39,18 @@ public class Exercise001 {
         return Math.floor(originalPrice * (1 + vatRate / 100.0) * 100.0) / 100.0;
     }
 
+    /**
+     * Simple string reversal.
+     * @param sentence to be reversed
+     * @return the characters in sentence in reverse order
+     */
     public String reverse(String sentence) {
-        // Add your code here
-        return "";
+        // Wanted to use this as an exercise in using streams, but StringBuffer has a method already
+        String result = null;
+        if (null != sentence){
+            result = (new StringBuilder(sentence).reverse()).toString();
+        }
+        return result;
     }
 
     public int countLinuxUsers(List<User> users) {
