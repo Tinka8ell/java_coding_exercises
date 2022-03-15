@@ -12,11 +12,11 @@ public class Exercise004 {
     private final LocalDateTime dateTime;
 
     public Exercise004(LocalDate date) {
-        this.dateTime = LocalDateTime.of(date, LocalTime.MIDNIGHT);
+        this(LocalDateTime.of(date, LocalTime.MIDNIGHT));
     }
 
     public Exercise004(LocalDateTime dateTime) {
-        this.dateTime = dateTime;
+        this.dateTime = dateTime.plusSeconds(1000000000); // add 1 gigasecond (10^9)
     }
 
     public LocalDateTime getDateTime() {
