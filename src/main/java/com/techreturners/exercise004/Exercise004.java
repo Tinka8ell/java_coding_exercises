@@ -2,18 +2,24 @@ package com.techreturners.exercise004;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.LocalTime;
 
+/**
+ * Initially make this a wrapper for a LocalDateTime object.
+ */
 public class Exercise004 {
 
+    private final LocalDateTime dateTime;
+
     public Exercise004(LocalDate date) {
-        throw new UnsupportedOperationException("You can delete this statement and add your code here.");
+        this.dateTime = LocalDateTime.of(date, LocalTime.MIDNIGHT);
     }
 
     public Exercise004(LocalDateTime dateTime) {
-        throw new UnsupportedOperationException("You can delete this statement and add your code here.");
+        this.dateTime = dateTime;
     }
 
     public LocalDateTime getDateTime() {
-        throw new UnsupportedOperationException("You can delete this statement and add your code here.");
+        return dateTime;
     }
 }
