@@ -7,16 +7,19 @@ import java.time.LocalTime;
 /**
  * Initially make this a wrapper for a LocalDateTime object.
  */
-public class Exercise004 {
+public class OneGigasecondLater {
 
+    public static final int KILO = 1000;
+    public static final int MEGA = KILO * KILO;
+    public static final int GIGA = MEGA * KILO;
     private final LocalDateTime dateTime;
 
-    public Exercise004(LocalDate date) {
+    public OneGigasecondLater(LocalDate date) {
         this(LocalDateTime.of(date, LocalTime.MIDNIGHT));
     }
 
-    public Exercise004(LocalDateTime dateTime) {
-        this.dateTime = dateTime.plusSeconds(1000000000); // add 1 gigasecond (10^9)
+    public OneGigasecondLater(LocalDateTime dateTime) {
+        this.dateTime = dateTime.plusSeconds(GIGA); // add 1 gigasecond (10^9)
     }
 
     public LocalDateTime getDateTime() {
